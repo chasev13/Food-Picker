@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Find a Restaurant</title>
+  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+  <link rel="stylesheet" href="main.css" >
+
 </head>
 <body>
-
-<h1>This is where the page will be</h1>
+	<form>
+	<h1>Choose your categories</h1>
+	<input type="checkbox" name="chinese" value="Chinese">		Chinese		</button> 
+	<input type="checkbox" name="fastfood" value="Fast Food">	Fast Food	</button> <br> <br> 
+	<input type="checkbox" name="italian"  value="Italian">		Italian		</button> 
+	<input type="checkbox" name="mexican"  value="Mexican">		Mexican		</button> <br> <br>
+	<input type="checkbox" name="indian"   value="Indian">		Indian		</button> 
+	<input type="checkbox" name="thai"	   value="Thai">		Thai		</button> <br> <br>
+	<input type="checkbox" name="japanese" value="Japanese">	Japanese	</button> 
+	<input type="checkbox" name="french" value="French">		French		</button> <br> <br>
+	<input type="checkbox" name="greek" value="Greek">			Greek		</button> 
+	<input type="checkbox" name="korean" value="Korean">		Korean		</button> <br> <br>
+	<input type="checkbox" name="american" value="American">	American	</button> 
+	<input type="checkbox" name="other" value="Other">			Other		</button> <br> <br>
+<script type="text/javascript">
+var checkedArray = [];
+$("input:checkbox[name=type]:checked").each(function()
+{
+    checkedArray.push($(this).val());
+});
+for (var i = 0; i < checkedArray.length; i++) {
+	alert(checkedArray[i]+"<br>");
+};
+</script>
+<button class = "button">Submit</button> <br> <br>
 <p><button><a href="index.html">Click here to go back</a></button></p>
+
+
 
 </body>
 </html>
